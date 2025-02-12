@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TÁ SOLTEIRA?</title>
+        <style>
+
+            #conteudo {
+
+                color: aliceblue;
+                background-image: url("https://images.unsplash.com/photo-1474552226712-ac0f0961a954?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzczODI2OTR8&ixlib=rb-4.0.3&q=85");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+            }
+
+            .botao {
+
+                padding: 10px;
+                width: 80px;
+                border-radius: 5px;
+
+            }
+
+            .botao:hover {
+
+                background-color: #4f0057bd;
+                transform: scale(1.05);
+                transition: transform 0.2s ease;
+
+            }
+
+            .centralizar {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: -150px;
+
+            }
+
+            .botoes {
+
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
+              
+            }
+
+            .botoes button {
+
+                padding: 10px 20px;
+                background-color: #330233c2;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                z-index: 3;
+                
+            }
+
+            .forma {
+
+                background-color: rgba(255, 255, 255, 0.295);
+                padding: 30px 20px;
+                border: none;
+                border-radius: 20px;
+                padding: 20px;
+                padding-bottom: 40px;
+
+            }
+            
+            .gif-conteudo {
+
+                position: fixed;
+                z-index: 1;
+                width: 200px;
+                height: auto;
+
+            }
+
+            .gif-conteudo iframe {
+
+                width: 35%;
+                height: 50%;
+                border: none;
+
+            }
+            
+            .gif-topo-esquerdo {
+
+                top: 10px;
+                left: 10px;
+
+            }
+
+            .gif-topo-direito {
+
+                top: 10px;
+                right: 10px;
+
+            }
+
+            .gif-baixo-direito{
+
+                bottom: 10px;
+                right: 10px;
+
+            }
+
+            .texto {
+
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1.1em; 
+                color: #f0f0f0; 
+                z-index: 4; 
+
+            }
+            
+        </style>
+    </head>
+
+    <body>
+
+        <div class="gif-conteudo gif-topo-esquerdo">
+            <iframe src="https://tenor.com/embed/16923666" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="gif-conteudo gif-topo-direito">
+            <iframe src="https://tenor.com/embed/9032971945348155119" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div id="conteudo">
+            <div class="centralizar">
+                <div class="forma">
+                    <h2>TÁ SOLTEIRA?</h2>
+                    <div class="botoes" style="margin: auto; width: 170px;">
+                        <button class="botao" onclick="sim()">SIM</button>
+                        <button class="botao" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gif-conteudo gif-baixo-direito">
+            <iframe src="https://tenor.com/embed/9984947328071887866"<iframe src="https://tenor.com/embed/9984947328071887866" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="texto">
+            "Você não é o Leão do Imposto de Renda, mas me deixa caidinho."
+        </div>
+
+        <script>
+
+            function sim() {
+                alert("ME CHAMA NO WHATS BB (❤️ ω ❤️)");
+                location.href = "https://www.youtube.com/watch?v=Wf-nksuWADw";
+            }
+
+            function desvia(botao) {
+                botao.style.position = 'absolute';
+                botao.style.bottom = geraPosicao(10, 70);
+                botao.style.left = geraPosicao(10, 70);
+            }
+
+            function geraPosicao(min, max) {
+                return (Math.random() * (max - min) + min) + "%";
+            }
+
+            const o = "MTHS1901", e = 90, l = "bold"; console.log(`%c${o}`, "font-size: 90px; font-weight: bold; background: linear-gradient(90deg, red, yellow);");
+
+        </script>
+
+    </body>
+
+</html>
